@@ -14,8 +14,6 @@ const resolvers = {
 
       const token = context.token;
       const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
-      console.log('decoded = ', decoded);
-
       if (decoded) {
         const userIdInput = args.userId;
         if (userIdInput) {
