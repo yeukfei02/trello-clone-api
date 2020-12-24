@@ -9,6 +9,35 @@ import TrelloCloneUser from '../model/TrelloCloneUser';
 
 const resolvers = {
   Query: {
+    getUserDetails: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const userIdInput = args.userId;
+        if (userIdInput) {
+          const trelloCloneUser = await TrelloCloneUser.query({ id: { eq: userIdInput } }).exec();
+          const trelloCloneUserObj = trelloCloneUser.toJSON();
+          const userDetails = {
+            id: trelloCloneUserObj[0].id,
+            email: trelloCloneUserObj[0].email,
+            firstName: trelloCloneUserObj[0].firstName,
+            lastName: trelloCloneUserObj[0].lastName,
+            createdAt: trelloCloneUserObj[0].createdAt,
+            updatedAt: trelloCloneUserObj[0].updatedAt,
+          };
+
+          response = {
+            message: 'getTodoList',
+            userDetails: userDetails,
+          };
+        }
+      }
+
+      return response;
+    },
+
     getTodoList: async (parent: any, args: any, context: any, info: any): Promise<any> => {
       let response = {};
 

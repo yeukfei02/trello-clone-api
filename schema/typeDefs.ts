@@ -8,6 +8,8 @@ const typeDefs = gql`
   scalar JSON
 
   type Query {
+    getUserDetails(userId: String!): GetUserDetailsResult!
+
     getTodoList(userId: String!): GetTodoListResult!
     getInProgressList(userId: String!): GetInProgressListResult!
     getDoneList(userId: String!): GetDoneListResult!
@@ -16,6 +18,20 @@ const typeDefs = gql`
   type Mutation {
     signup(data: SignupInput!): SignupResult!
     login(data: LoginInput!): LoginResult!
+  }
+
+  type GetUserDetailsResult {
+    message: String!
+    userDetails: UserDetails!
+  }
+
+  type UserDetails {
+    id: String!
+    email: String!
+    firstName: String!
+    lastName: String!
+    createdAt: String!
+    updatedAt: String!
   }
 
   type GetTodoListResult {
