@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "0fc200d3-698d-464e-aa0e-28ab5c37825e",
+		"name": "trello-clone-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mutations",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation signup ($data: SignupInput!) {\n    signup (data: $data) {\n        message\n    }\n}",
+								"variables": "{\n  \"data\": {\n    \"email\": \"yeukfei02@gmail.com\",\n    \"password\": \"test\",\n    \"firstName\": \"Donald\",\n    \"lastName\": \"Wu\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation login ($data: LoginInput!) {\n    login (data: $data) {\n        message\n        token\n        userId\n    }\n}",
+								"variables": "{\n  \"data\": {\n    \"email\": \"yeukfei02@gmail.com\",\n    \"password\": \"test\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTodoData",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation addTodoData ($data: AddTodoDataInput!) {\n    addTodoData (data: $data) {\n        message\n    }\n}",
+								"variables": "{\n  \"data\": {\n    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"title\": \"test\",\n    \"description\": \"test1\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addInProgressData",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation addInProgressData ($data: AddInProgressDataInput!) {\n    addInProgressData (data: $data) {\n        message\n    }\n}",
+								"variables": "{\n  \"data\": {\n    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"title\": \"test\",\n    \"description\": \"test1\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addDoneData",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation addDoneData ($data: AddDoneDataInput!) {\n    addDoneData (data: $data) {\n        message\n    }\n}",
+								"variables": "{\n  \"data\": {\n    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"title\": \"test\",\n    \"description\": \"test1\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "queries",
+			"item": [
+				{
+					"name": "getUserDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getUserDetails ($userId: String!) {\n    getUserDetails (userId: $userId) {\n        message\n        userDetails {\n            id\n            email\n            firstName\n            lastName\n            createdAt\n            updatedAt\n        }\n    }\n}",
+								"variables": "{\n  \"userId\": \"\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTodoList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getTodoList ($userId: String!) {\n    getTodoList (userId: $userId) {\n        message\n        todo {\n            id\n            userId\n            title\n            description\n        }\n    }\n}",
+								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInProgressList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getInProgressList ($userId: String!) {\n    getInProgressList (userId: $userId) {\n        message\n        inProgress {\n            id\n            userId\n            title\n            description\n        }\n    }\n}",
+								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDoneList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getDoneList ($userId: String!) {\n    getDoneList (userId: $userId) {\n        message\n        done {\n            id\n            userId\n            title\n            description\n        }\n    }\n}",
+								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "any",
+			"description": {
+				"content": "URL for the request.",
+				"type": "text/plain"
+			}
+		}
+	]
+}
