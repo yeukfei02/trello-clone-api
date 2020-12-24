@@ -6,6 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
 import _ from 'lodash';
 
 import TrelloCloneUser from '../model/TrelloCloneUser';
+import TrelloCloneTodoData from '../model/TrelloCloneTodoData';
+import TrelloCloneInProgressData from '../model/TrelloCloneInProgressData';
+import TrelloCloneDoneData from '../model/TrelloCloneDoneData';
 
 const resolvers = {
   Query: {
@@ -46,8 +49,12 @@ const resolvers = {
       if (decoded) {
         const userIdInput = args.userId;
         if (userIdInput) {
+          const trelloCloneTodoData = await TrelloCloneTodoData.scan({ userId: { eq: userIdInput } }).exec();
+          const trelloCloneTodoDataList = trelloCloneTodoData.toJSON();
+
           response = {
             message: 'getTodoList',
+            todo: trelloCloneTodoDataList,
           };
         }
       }
@@ -63,8 +70,14 @@ const resolvers = {
       if (decoded) {
         const userIdInput = args.userId;
         if (userIdInput) {
+          const trelloCloneInProgressData = await TrelloCloneInProgressData.scan({
+            userId: { eq: userIdInput },
+          }).exec();
+          const trelloCloneInProgressDataList = trelloCloneInProgressData.toJSON();
+
           response = {
             message: 'getInProgressList',
+            inProgress: trelloCloneInProgressDataList,
           };
         }
       }
@@ -80,8 +93,12 @@ const resolvers = {
       if (decoded) {
         const userIdInput = args.userId;
         if (userIdInput) {
+          const trelloCloneDoneData = await TrelloCloneDoneData.scan({ userId: { eq: userIdInput } }).exec();
+          const trelloCloneDoneDataList = trelloCloneDoneData.toJSON();
+
           response = {
             message: 'getDoneList',
+            done: trelloCloneDoneDataList,
           };
         }
       }
@@ -154,6 +171,87 @@ const resolvers = {
               userId: '',
             };
           }
+        }
+      }
+
+      return response;
+    },
+
+    addTodoData: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const userIdInput = args.data.userId;
+        const titleInput = args.data.title;
+        const descriptionInput = args.data.description;
+        if (userIdInput) {
+          const newTrelloCloneTodoData = new TrelloCloneTodoData({
+            id: uuidv4(),
+            userId: userIdInput,
+            title: titleInput,
+            description: descriptionInput,
+          });
+          await newTrelloCloneTodoData.save();
+
+          response = {
+            message: 'addTodo',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    addInProgressData: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const userIdInput = args.data.userId;
+        const titleInput = args.data.title;
+        const descriptionInput = args.data.description;
+        if (userIdInput) {
+          const newTrelloCloneInProgressData = new TrelloCloneInProgressData({
+            id: uuidv4(),
+            userId: userIdInput,
+            title: titleInput,
+            description: descriptionInput,
+          });
+          await newTrelloCloneInProgressData.save();
+
+          response = {
+            message: 'addInProgress',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    addDoneData: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const userIdInput = args.data.userId;
+        const titleInput = args.data.title;
+        const descriptionInput = args.data.description;
+        if (userIdInput) {
+          const newTrelloCloneDoneData = new TrelloCloneDoneData({
+            id: uuidv4(),
+            userId: userIdInput,
+            title: titleInput,
+            description: descriptionInput,
+          });
+          await newTrelloCloneDoneData.save();
+
+          response = {
+            message: 'addDone',
+          };
         }
       }
 

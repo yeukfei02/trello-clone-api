@@ -18,6 +18,10 @@ const typeDefs = gql`
   type Mutation {
     signup(data: SignupInput!): SignupResult!
     login(data: LoginInput!): LoginResult!
+
+    addTodoData(data: AddTodoDataInput!): AddTodoDataResult!
+    addInProgressData(data: AddInProgressDataInput!): AddInProgressDataResult!
+    addDoneData(data: AddDoneDataInput!): AddDoneDataResult!
   }
 
   type GetUserDetailsResult {
@@ -36,13 +40,37 @@ const typeDefs = gql`
 
   type GetTodoListResult {
     message: String!
+    todo: [Todo!]!
   }
 
   type GetInProgressListResult {
     message: String!
+    inProgress: [InProgress!]!
   }
   type GetDoneListResult {
     message: String!
+    done: [Done!]!
+  }
+
+  type Todo {
+    id: String!
+    userId: String!
+    title: String!
+    description: String!
+  }
+
+  type InProgress {
+    id: String!
+    userId: String!
+    title: String!
+    description: String!
+  }
+
+  type Done {
+    id: String!
+    userId: String!
+    title: String!
+    description: String!
   }
 
   type SignupResult {
@@ -55,6 +83,18 @@ const typeDefs = gql`
     userId: String
   }
 
+  type AddTodoDataResult {
+    message: String!
+  }
+
+  type AddInProgressDataResult {
+    message: String!
+  }
+
+  type AddDoneDataResult {
+    message: String!
+  }
+
   input SignupInput {
     email: String!
     password: String!
@@ -65,6 +105,24 @@ const typeDefs = gql`
   input LoginInput {
     email: String!
     password: String!
+  }
+
+  input AddTodoDataInput {
+    userId: String!
+    title: String!
+    description: String!
+  }
+
+  input AddInProgressDataInput {
+    userId: String!
+    title: String!
+    description: String!
+  }
+
+  input AddDoneDataInput {
+    userId: String!
+    title: String!
+    description: String!
   }
 `;
 
