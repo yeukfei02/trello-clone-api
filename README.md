@@ -4,7 +4,7 @@ trello-clone-api
 
 documentation:
 
-api url:
+api url: https://qtwaxcn004.execute-api.ap-southeast-1.amazonaws.com/prod/
 
 ## Requirement:
 
