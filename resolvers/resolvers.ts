@@ -116,6 +116,7 @@ const resolvers = {
             response = {
               message: 'login',
               token: token,
+              userId: trelloCloneUserFromDB.id,
             };
           } else {
             response = {
