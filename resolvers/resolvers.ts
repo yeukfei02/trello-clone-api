@@ -122,6 +122,7 @@ const resolvers = {
             response = {
               message: 'login error, wrong password',
               token: '',
+              userId: '',
             };
           }
         }

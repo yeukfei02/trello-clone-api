@@ -35,8 +35,8 @@ const typeDefs = gql`
 
   type LoginResult {
     message: String!
-    token: String!
-    userId: String!
+    token: String
+    userId: String
   }
 
   input SignupInput {
