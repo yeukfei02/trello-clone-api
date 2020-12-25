@@ -52,10 +52,20 @@ const resolvers = {
           const trelloCloneTodoData = await TrelloCloneTodoData.scan({ userId: { eq: userIdInput } }).exec();
           const trelloCloneTodoDataList = trelloCloneTodoData.toJSON();
 
-          response = {
-            message: 'getTodoList',
-            todo: trelloCloneTodoDataList,
-          };
+          if (trelloCloneTodoDataList) {
+            const formattedTrelloCloneTodoDataList = trelloCloneTodoDataList.map((item: any, i: number) => {
+              const obj = {
+                dataType: 'todo',
+              };
+              const newObj = Object.assign(item, obj);
+              return newObj;
+            });
+
+            response = {
+              message: 'getTodoList',
+              todo: formattedTrelloCloneTodoDataList,
+            };
+          }
         }
       }
 
@@ -75,10 +85,20 @@ const resolvers = {
           }).exec();
           const trelloCloneInProgressDataList = trelloCloneInProgressData.toJSON();
 
-          response = {
-            message: 'getInProgressList',
-            inProgress: trelloCloneInProgressDataList,
-          };
+          if (trelloCloneInProgressDataList) {
+            const formattedTrelloCloneInProgressDataList = trelloCloneInProgressDataList.map((item: any, i: number) => {
+              const obj = {
+                dataType: 'inProgress',
+              };
+              const newObj = Object.assign(item, obj);
+              return newObj;
+            });
+
+            response = {
+              message: 'getInProgressList',
+              inProgress: formattedTrelloCloneInProgressDataList,
+            };
+          }
         }
       }
 
@@ -96,10 +116,20 @@ const resolvers = {
           const trelloCloneDoneData = await TrelloCloneDoneData.scan({ userId: { eq: userIdInput } }).exec();
           const trelloCloneDoneDataList = trelloCloneDoneData.toJSON();
 
-          response = {
-            message: 'getDoneList',
-            done: trelloCloneDoneDataList,
-          };
+          if (trelloCloneDoneDataList) {
+            const formattedTrelloCloneDoneDataList = trelloCloneDoneDataList.map((item: any, i: number) => {
+              const obj = {
+                dataType: 'done',
+              };
+              const newObj = Object.assign(item, obj);
+              return newObj;
+            });
+
+            response = {
+              message: 'getDoneList',
+              done: formattedTrelloCloneDoneDataList,
+            };
+          }
         }
       }
 

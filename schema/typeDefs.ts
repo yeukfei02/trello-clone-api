@@ -57,6 +57,7 @@ const typeDefs = gql`
     userId: String!
     title: String!
     description: String!
+    dataType: String!
     createdAt: String!
     updatedAt: String!
   }
@@ -66,6 +67,7 @@ const typeDefs = gql`
     userId: String!
     title: String!
     description: String!
+    dataType: String!
     createdAt: String!
     updatedAt: String!
   }
@@ -75,6 +77,7 @@ const typeDefs = gql`
     userId: String!
     title: String!
     description: String!
+    dataType: String!
     createdAt: String!
     updatedAt: String!
   }

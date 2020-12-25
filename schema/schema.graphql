@@ -50,6 +50,7 @@ type Todo {
   userId: String!
   title: String!
   description: String!
+  dataType: String!
   createdAt: String!
   updatedAt: String!
 }
@@ -59,6 +60,7 @@ type InProgress {
   userId: String!
   title: String!
   description: String!
+  dataType: String!
   createdAt: String!
   updatedAt: String!
 }
@@ -68,6 +70,7 @@ type Done {
   userId: String!
   title: String!
   description: String!
+  dataType: String!
   createdAt: String!
   updatedAt: String!
 }
