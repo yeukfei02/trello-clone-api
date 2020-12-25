@@ -207,6 +207,43 @@ const resolvers = {
       return response;
     },
 
+    changePassword: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.data.id;
+        const currentPasswordInput = args.data.currentPassword;
+        const newPasswordInput = args.data.newPassword;
+
+        if (idInput && currentPasswordInput && newPasswordInput) {
+          const trelloCloneUser = await TrelloCloneUser.query({ id: idInput }).exec();
+          const trelloCloneUserList = trelloCloneUser.toJSON();
+
+          if (trelloCloneUserList) {
+            const trelloCloneUserFromDB = trelloCloneUserList[0];
+            const hashPasswordFromDB = trelloCloneUserFromDB.password;
+            const isCurrentPasswordValid = bcrypt.compareSync(currentPasswordInput, hashPasswordFromDB);
+            if (isCurrentPasswordValid) {
+              const newHashPassword = bcrypt.hashSync(newPasswordInput);
+              await TrelloCloneUser.update({ id: idInput }, { password: newHashPassword });
+
+              response = {
+                message: 'changePassword',
+              };
+            } else {
+              response = {
+                message: 'changePassword error, wrong current password',
+              };
+            }
+          }
+        }
+      }
+
+      return response;
+    },
+
     addTodoData: async (parent: any, args: any, context: any, info: any): Promise<any> => {
       let response = {};
 
