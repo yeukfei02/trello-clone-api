@@ -52,10 +52,20 @@ const resolvers = {
           const trelloCloneTodoData = await TrelloCloneTodoData.scan({ userId: { eq: userIdInput } }).exec();
           const trelloCloneTodoDataList = trelloCloneTodoData.toJSON();
 
-          response = {
-            message: 'getTodoList',
-            todo: trelloCloneTodoDataList,
-          };
+          if (trelloCloneTodoDataList) {
+            const formattedTrelloCloneTodoDataList = trelloCloneTodoDataList.map((item: any, i: number) => {
+              const obj = {
+                dataType: 'todo',
+              };
+              const newObj = Object.assign(item, obj);
+              return newObj;
+            });
+
+            response = {
+              message: 'getTodoList',
+              todo: formattedTrelloCloneTodoDataList,
+            };
+          }
         }
       }
 
@@ -75,10 +85,20 @@ const resolvers = {
           }).exec();
           const trelloCloneInProgressDataList = trelloCloneInProgressData.toJSON();
 
-          response = {
-            message: 'getInProgressList',
-            inProgress: trelloCloneInProgressDataList,
-          };
+          if (trelloCloneInProgressDataList) {
+            const formattedTrelloCloneInProgressDataList = trelloCloneInProgressDataList.map((item: any, i: number) => {
+              const obj = {
+                dataType: 'inProgress',
+              };
+              const newObj = Object.assign(item, obj);
+              return newObj;
+            });
+
+            response = {
+              message: 'getInProgressList',
+              inProgress: formattedTrelloCloneInProgressDataList,
+            };
+          }
         }
       }
 
@@ -96,10 +116,20 @@ const resolvers = {
           const trelloCloneDoneData = await TrelloCloneDoneData.scan({ userId: { eq: userIdInput } }).exec();
           const trelloCloneDoneDataList = trelloCloneDoneData.toJSON();
 
-          response = {
-            message: 'getDoneList',
-            done: trelloCloneDoneDataList,
-          };
+          if (trelloCloneDoneDataList) {
+            const formattedTrelloCloneDoneDataList = trelloCloneDoneDataList.map((item: any, i: number) => {
+              const obj = {
+                dataType: 'done',
+              };
+              const newObj = Object.assign(item, obj);
+              return newObj;
+            });
+
+            response = {
+              message: 'getDoneList',
+              done: formattedTrelloCloneDoneDataList,
+            };
+          }
         }
       }
 
@@ -251,6 +281,66 @@ const resolvers = {
 
           response = {
             message: 'addDone',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    deleteTodoDataById: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.id;
+        if (idInput) {
+          const trelloCloneTodoData = await TrelloCloneTodoData.get({ id: idInput });
+          await trelloCloneTodoData.delete();
+
+          response = {
+            message: 'deleteTodoDataById',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    deleteInProgressDataById: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.id;
+        if (idInput) {
+          const trelloCloneInProgressData = await TrelloCloneInProgressData.get({ id: idInput });
+          await trelloCloneInProgressData.delete();
+
+          response = {
+            message: 'deleteInProgressDataById',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    deleteDoneDataById: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.id;
+        if (idInput) {
+          const trelloCloneDoneData = await TrelloCloneDoneData.get({ id: idInput });
+          await trelloCloneDoneData.delete();
+
+          response = {
+            message: 'deleteDoneDataById',
           };
         }
       }
