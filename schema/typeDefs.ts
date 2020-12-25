@@ -57,6 +57,8 @@ const typeDefs = gql`
     userId: String!
     title: String!
     description: String!
+    createdAt: String!
+    updatedAt: String!
   }
 
   type InProgress {
@@ -64,6 +66,8 @@ const typeDefs = gql`
     userId: String!
     title: String!
     description: String!
+    createdAt: String!
+    updatedAt: String!
   }
 
   type Done {
@@ -71,6 +75,8 @@ const typeDefs = gql`
     userId: String!
     title: String!
     description: String!
+    createdAt: String!
+    updatedAt: String!
   }
 
   type SignupResult {
