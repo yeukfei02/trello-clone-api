@@ -211,6 +211,103 @@
 					]
 				},
 				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation changePassword ($data: ChangePasswordInput!) {\n    changePassword (data: $data) {\n        message\n    }\n}",
+								"variables": "{\n  \"data\": {\n    \"id\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"currentPassword\": \"test\",\n    \"newPassword\": \"test1\"\n  }\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "changePassword",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation changePassword ($data: ChangePasswordInput!) {\n    changePassword (data: $data) {\n        message\n    }\n}",
+										"variables": "{\n  \"data\": {\n    \"id\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"currentPassword\": \"test\",\n    \"newPassword\": \"test1\"\n  }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "543"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "vary",
+									"value": "origin"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 10:12:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"changePassword\": {\n            \"message\": \"changePassword\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T10:12:33.856Z\",\n            \"endTime\": \"2020-12-25T10:12:34.574Z\",\n            \"duration\": 718199246,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"changePassword\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"changePassword\",\n                        \"returnType\": \"ChangePasswordResult!\",\n                        \"startOffset\": 6267456,\n                        \"duration\": 711598117\n                    },\n                    {\n                        \"path\": [\n                            \"changePassword\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"ChangePasswordResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 717951540,\n                        \"duration\": 102869\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "addTodoData",
 					"request": {
 						"method": "POST",
