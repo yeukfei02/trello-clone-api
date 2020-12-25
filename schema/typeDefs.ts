@@ -22,6 +22,10 @@ const typeDefs = gql`
     addTodoData(data: AddTodoDataInput!): AddTodoDataResult!
     addInProgressData(data: AddInProgressDataInput!): AddInProgressDataResult!
     addDoneData(data: AddDoneDataInput!): AddDoneDataResult!
+
+    deleteTodoDataById(id: String!): DeleteTodoDataByIdResult!
+    deleteInProgressDataById(id: String!): DeleteInProgressDataByIdResult!
+    deleteDoneDataById(id: String!): DeleteDoneDataByIdResult!
   }
 
   type GetUserDetailsResult {
@@ -101,6 +105,18 @@ const typeDefs = gql`
   }
 
   type AddDoneDataResult {
+    message: String!
+  }
+
+  type DeleteTodoDataByIdResult {
+    message: String!
+  }
+
+  type DeleteInProgressDataByIdResult {
+    message: String!
+  }
+
+  type DeleteDoneDataByIdResult {
     message: String!
   }
 

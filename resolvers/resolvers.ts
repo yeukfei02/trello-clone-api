@@ -287,6 +287,66 @@ const resolvers = {
 
       return response;
     },
+
+    deleteTodoDataById: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.id;
+        if (idInput) {
+          const trelloCloneTodoData = await TrelloCloneTodoData.get({ id: idInput });
+          await trelloCloneTodoData.delete();
+
+          response = {
+            message: 'deleteTodoDataById',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    deleteInProgressDataById: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.id;
+        if (idInput) {
+          const trelloCloneInProgressData = await TrelloCloneInProgressData.get({ id: idInput });
+          await trelloCloneInProgressData.delete();
+
+          response = {
+            message: 'deleteInProgressDataById',
+          };
+        }
+      }
+
+      return response;
+    },
+
+    deleteDoneDataById: async (parent: any, args: any, context: any, info: any): Promise<any> => {
+      let response = {};
+
+      const token = context.token;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string);
+      if (decoded) {
+        const idInput = args.id;
+        if (idInput) {
+          const trelloCloneDoneData = await TrelloCloneDoneData.get({ id: idInput });
+          await trelloCloneDoneData.delete();
+
+          response = {
+            message: 'deleteDoneDataById',
+          };
+        }
+      }
+
+      return response;
+    },
   },
 
   JSON: {
