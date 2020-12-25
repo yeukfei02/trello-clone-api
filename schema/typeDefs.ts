@@ -18,6 +18,7 @@ const typeDefs = gql`
   type Mutation {
     signup(data: SignupInput!): SignupResult!
     login(data: LoginInput!): LoginResult!
+    changePassword(data: ChangePasswordInput!): ChangePasswordResult!
 
     addTodoData(data: AddTodoDataInput!): AddTodoDataResult!
     addInProgressData(data: AddInProgressDataInput!): AddInProgressDataResult!
@@ -51,6 +52,7 @@ const typeDefs = gql`
     message: String!
     inProgress: [InProgress!]!
   }
+
   type GetDoneListResult {
     message: String!
     done: [Done!]!
@@ -96,6 +98,10 @@ const typeDefs = gql`
     userId: String
   }
 
+  type ChangePasswordResult {
+    message: String!
+  }
+
   type AddTodoDataResult {
     message: String!
   }
@@ -130,6 +136,12 @@ const typeDefs = gql`
   input LoginInput {
     email: String!
     password: String!
+  }
+
+  input ChangePasswordInput {
+    id: String!
+    currentPassword: String!
+    newPassword: String!
   }
 
   input AddTodoDataInput {
