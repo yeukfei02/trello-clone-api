@@ -297,7 +297,7 @@ const resolvers = {
         const idInput = args.id;
         if (idInput) {
           const trelloCloneTodoData = await TrelloCloneTodoData.get({ id: idInput });
-          await trelloCloneTodoData.delete();
+          if (trelloCloneTodoData) await trelloCloneTodoData.delete();
 
           response = {
             message: 'deleteTodoDataById',
@@ -317,7 +317,7 @@ const resolvers = {
         const idInput = args.id;
         if (idInput) {
           const trelloCloneInProgressData = await TrelloCloneInProgressData.get({ id: idInput });
-          await trelloCloneInProgressData.delete();
+          if (trelloCloneInProgressData) await trelloCloneInProgressData.delete();
 
           response = {
             message: 'deleteInProgressDataById',
@@ -337,7 +337,7 @@ const resolvers = {
         const idInput = args.id;
         if (idInput) {
           const trelloCloneDoneData = await TrelloCloneDoneData.get({ id: idInput });
-          await trelloCloneDoneData.delete();
+          if (trelloCloneDoneData) await trelloCloneDoneData.delete();
 
           response = {
             message: 'deleteDoneDataById',

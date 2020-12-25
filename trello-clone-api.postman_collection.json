@@ -27,7 +27,87 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation signup ($data: SignupInput!) {\n    signup (data: $data) {\n        message\n    }\n}",
+										"variables": "{\n  \"data\": {\n    \"email\": \"yeukfei09@gmail.com\",\n    \"password\": \"test\",\n    \"firstName\": \"Donald\",\n    \"lastName\": \"Wu\"\n  }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "485"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:54:05 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "10c9ced3-1667-4277-806d-d755981c2ce7"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "485"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUYlErEyQ0FqkQ="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59a9d-751bc26f77c1b53b7798cc0d;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "YwTpnGdU-RICKiBNeqqYYDpYWjfqSRa0nP48TeZHgfKQ-T5TSrlgaA=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"signup\": {\n            \"message\": \"signup\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:54:05.288Z\",\n            \"endTime\": \"2020-12-25T07:54:05.477Z\",\n            \"duration\": 188878412,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"signup\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"signup\",\n                        \"returnType\": \"SignupResult!\",\n                        \"startOffset\": 429754,\n                        \"duration\": 188337572\n                    },\n                    {\n                        \"path\": [\n                            \"signup\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"SignupResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 188807918,\n                        \"duration\": 28418\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "login",
@@ -48,7 +128,87 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation login ($data: LoginInput!) {\n    login (data: $data) {\n        message\n        token\n        userId\n    }\n}",
+										"variables": "{\n  \"data\": {\n    \"email\": \"yeukfei02@gmail.com\",\n    \"password\": \"test\"\n  }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:54:10 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "92980041-592c-45cc-bbdb-a86449183ccd"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUZbEXHSQ0FlDw="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59aa2-11493d931d591ee34c2d0a34;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "j-sC7uBzBcdSByjsyZq8bPj9vZb_sNX7X7dJmYTZfdlFH9YdvCWw0A=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"login\": {\n            \"message\": \"login\",\n            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4ODI4NTAsImV4cCI6MTYwODk2OTI1MH0.gC8AHOXZ-LqgJlI_PivLrxAQN4wvSzfcpW2XDLvE3Es\",\n            \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:54:10.650Z\",\n            \"endTime\": \"2020-12-25T07:54:10.812Z\",\n            \"duration\": 162878310,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"login\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"login\",\n                        \"returnType\": \"LoginResult!\",\n                        \"startOffset\": 1080490,\n                        \"duration\": 161633059\n                    },\n                    {\n                        \"path\": [\n                            \"login\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"LoginResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 162770011,\n                        \"duration\": 32672\n                    },\n                    {\n                        \"path\": [\n                            \"login\",\n                            \"token\"\n                        ],\n                        \"parentType\": \"LoginResult\",\n                        \"fieldName\": \"token\",\n                        \"returnType\": \"String\",\n                        \"startOffset\": 162809486,\n                        \"duration\": 11041\n                    },\n                    {\n                        \"path\": [\n                            \"login\",\n                            \"userId\"\n                        ],\n                        \"parentType\": \"LoginResult\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String\",\n                        \"startOffset\": 162825340,\n                        \"duration\": 7048\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "addTodoData",
@@ -75,7 +235,93 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "addTodoData",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation addTodoData ($data: AddTodoDataInput!) {\n    addTodoData (data: $data) {\n        message\n    }\n}",
+										"variables": "{\n  \"data\": {\n    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"title\": \"test\",\n    \"description\": \"test1\"\n  }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "513"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:54:57 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "c683c0b8-d760-4b64-b97b-1c4300027c7e"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "513"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUgsGRwyQ0FudA="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59ad1-5c3d78f9276f2ab33dbe3caf;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "PxUX9eUSnyc5E2dFVMp9q34owoVjOhRngTFjj98PnuG1wtjMOLFQpA=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"addTodoData\": {\n            \"message\": \"addTodo\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:54:57.144Z\",\n            \"endTime\": \"2020-12-25T07:54:57.172Z\",\n            \"duration\": 28062195,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"addTodoData\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"addTodoData\",\n                        \"returnType\": \"AddTodoDataResult!\",\n                        \"startOffset\": 945209,\n                        \"duration\": 27009849\n                    },\n                    {\n                        \"path\": [\n                            \"addTodoData\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"AddTodoDataResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 27992161,\n                        \"duration\": 27994\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "addInProgressData",
@@ -102,7 +348,93 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "addInProgressData",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation addInProgressData ($data: AddInProgressDataInput!) {\n    addInProgressData (data: $data) {\n        message\n    }\n}",
+										"variables": "{\n  \"data\": {\n    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"title\": \"test\",\n    \"description\": \"test1\"\n  }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "555"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:55:06 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "255bdde5-6215-4536-a6b3-af62daad0ec5"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "555"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUiHGMDSQ0FQcA="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59ada-5737d816067ac6f355243577;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "B4-UjiRzRDHG1XRGv3oj9hVCByr4nsT9QX9Z0NR0aIVygeT9rN7-eA=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"addInProgressData\": {\n            \"message\": \"addInProgress\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:55:06.294Z\",\n            \"endTime\": \"2020-12-25T07:55:06.316Z\",\n            \"duration\": 22737580,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"addInProgressData\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"addInProgressData\",\n                        \"returnType\": \"AddInProgressDataResult!\",\n                        \"startOffset\": 990124,\n                        \"duration\": 21633572\n                    },\n                    {\n                        \"path\": [\n                            \"addInProgressData\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"AddInProgressDataResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 22664999,\n                        \"duration\": 28084\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "addDoneData",
@@ -129,7 +461,432 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "addDoneData",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation addDoneData ($data: AddDoneDataInput!) {\n    addDoneData (data: $data) {\n        message\n    }\n}",
+										"variables": "{\n  \"data\": {\n    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n    \"title\": \"test\",\n    \"description\": \"test1\"\n  }\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "514"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:55:13 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "6526f1c6-0b64-4cf6-9350-bdffa9b8c4b9"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "514"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUjNHD7yQ0FVBw="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59ae1-1eaa536547f168084dedd64c;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "LdhrVwyLV_ZeO86e-TE3_jGfSeL87tNfXZOo1yQZlz2dMrKbdVoYyQ=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"addDoneData\": {\n            \"message\": \"addDone\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:55:13.244Z\",\n            \"endTime\": \"2020-12-25T07:55:13.277Z\",\n            \"duration\": 32490685,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"addDoneData\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"addDoneData\",\n                        \"returnType\": \"AddDoneDataResult!\",\n                        \"startOffset\": 1015458,\n                        \"duration\": 31338269\n                    },\n                    {\n                        \"path\": [\n                            \"addDoneData\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"AddDoneDataResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 32398622,\n                        \"duration\": 33153\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteTodoDataById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation deleteTodoDataById ($id: String!) {\n    deleteTodoDataById (id: $id) {\n        message\n    }\n}",
+								"variables": "{\n  \"id\": \"c394acf1-394b-49b1-ae71-7e232879da0d\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteTodoDataById",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation deleteTodoDataById ($id: String!) {\n    deleteTodoDataById (id: $id) {\n        message\n    }\n}",
+										"variables": "{\n  \"id\": \"c2843a06-41c1-4517-86c7-ca6075be7e45\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "571"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 08:03:07 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "59926bd8-cc73-4d53-9035-c9e9b607ea2f"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "571"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGVtTEfASQ0FTMA="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59cbb-4d866a4947c32e706e5c53d6;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 6c12f45af1f84786ea85b2585f1d5df2.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "hqCpJdiHb9eLbu-weXVFoz9aIX6sI_rGpfdwa0GJMbQ3mb3Bw_9R1w=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"deleteTodoDataById\": {\n            \"message\": \"deleteTodoDataById\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T08:03:07.583Z\",\n            \"endTime\": \"2020-12-25T08:03:07.844Z\",\n            \"duration\": 260746675,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"deleteTodoDataById\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"deleteTodoDataById\",\n                        \"returnType\": \"DeleteTodoDataByIdResult!\",\n                        \"startOffset\": 11916768,\n                        \"duration\": 248462407\n                    },\n                    {\n                        \"path\": [\n                            \"deleteTodoDataById\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"DeleteTodoDataByIdResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 260502978,\n                        \"duration\": 95593\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteInProgressDataById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation deleteInProgressDataById ($id: String!) {\n    deleteInProgressDataById (id: $id) {\n        message\n    }\n}",
+								"variables": "{\n  \"id\": \"c1555471-382c-4a0d-abc8-c7c3b956f749\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteInProgressDataById",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation deleteInProgressDataById ($id: String!) {\n    deleteInProgressDataById (id: $id) {\n        message\n    }\n}",
+										"variables": "{\n  \"id\": \"c1555471-382c-4a0d-abc8-c7c3b956f749\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "611"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 08:04:02 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "ce434a52-7f21-401c-ba66-2590d2e19fef"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "611"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGV17HGpSQ0FqKg="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59cf2-766512510cbb845a4953f112;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 6c12f45af1f84786ea85b2585f1d5df2.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "YJB7czPuSPH2gnkPpVQkPv54C7Mw7jo-Q-F_sLlUDzHrZpNgFoaN4Q=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"deleteInProgressDataById\": {\n            \"message\": \"deleteInProgressDataById\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T08:04:02.737Z\",\n            \"endTime\": \"2020-12-25T08:04:02.844Z\",\n            \"duration\": 107036853,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"deleteInProgressDataById\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"deleteInProgressDataById\",\n                        \"returnType\": \"DeleteInProgressDataByIdResult!\",\n                        \"startOffset\": 597599,\n                        \"duration\": 106236239\n                    },\n                    {\n                        \"path\": [\n                            \"deleteInProgressDataById\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"DeleteInProgressDataByIdResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 106911116,\n                        \"duration\": 49500\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteDoneDataById",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation deleteDoneDataById ($id: String!) {\n    deleteDoneDataById (id: $id) {\n        message\n    }\n}",
+								"variables": "{\n  \"id\": \"f3d88862-09a5-40c8-9fee-41cb37b14468\"\n}"
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteDoneDataById",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation deleteDoneDataById ($id: String!) {\n    deleteDoneDataById (id: $id) {\n        message\n    }\n}",
+										"variables": "{\n  \"id\": \"60fd2bfd-8d6e-42e1-8890-e768f24a0eca\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "567"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 08:04:39 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "abd4a6fd-31c6-424e-bf40-aaaf33c7b998"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "567"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGV7vEmySQ0FXvA="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59d17-54a5bcf7120924e1723c49c5;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 6c12f45af1f84786ea85b2585f1d5df2.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "vPaLFMmzlMkf4V8Em8ituuUPkZdzfXgkAA9zee5lvStGjb_VS11fsw=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"deleteDoneDataById\": {\n            \"message\": \"deleteDoneDataById\"\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T08:04:39.853Z\",\n            \"endTime\": \"2020-12-25T08:04:39.901Z\",\n            \"duration\": 47956333,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"deleteDoneDataById\"\n                        ],\n                        \"parentType\": \"Mutation\",\n                        \"fieldName\": \"deleteDoneDataById\",\n                        \"returnType\": \"DeleteDoneDataByIdResult!\",\n                        \"startOffset\": 1750926,\n                        \"duration\": 46037239\n                    },\n                    {\n                        \"path\": [\n                            \"deleteDoneDataById\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"DeleteDoneDataByIdResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 47853214,\n                        \"duration\": 42767\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -151,7 +908,7 @@
 							"mode": "graphql",
 							"graphql": {
 								"query": "query getUserDetails ($userId: String!) {\n    getUserDetails (userId: $userId) {\n        message\n        userDetails {\n            id\n            email\n            firstName\n            lastName\n            createdAt\n            updatedAt\n        }\n    }\n}",
-								"variables": "{\n  \"userId\": \"\"\n}"
+								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
 							}
 						},
 						"url": {
@@ -161,7 +918,93 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "getUserDetails",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query getUserDetails ($userId: String!) {\n    getUserDetails (userId: $userId) {\n        message\n        userDetails {\n            id\n            email\n            firstName\n            lastName\n            createdAt\n            updatedAt\n        }\n    }\n}",
+										"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1888"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:56:16 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "ee21a2b3-43a4-41f0-8c36-ee98e54e2e99"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "1888"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUtCHyqSQ0Fjvw="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59b20-1d139ed71141b4437f1803bf;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "StcdFb7x4l3V5j581Dt1Sdq_r6Sk3tKz6yGFCnm_PaNmE_zwKxlXJg=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"getUserDetails\": {\n            \"message\": \"getTodoList\",\n            \"userDetails\": {\n                \"id\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                \"email\": \"yeukfei02@gmail.com\",\n                \"firstName\": \"Donald\",\n                \"lastName\": \"Wu\",\n                \"createdAt\": \"2020-12-24T14:18:05.459Z\",\n                \"updatedAt\": \"2020-12-24T14:18:05.459Z\"\n            }\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:56:16.206Z\",\n            \"endTime\": \"2020-12-25T07:56:16.249Z\",\n            \"duration\": 42738393,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"getUserDetails\"\n                        ],\n                        \"parentType\": \"Query\",\n                        \"fieldName\": \"getUserDetails\",\n                        \"returnType\": \"GetUserDetailsResult!\",\n                        \"startOffset\": 1367410,\n                        \"duration\": 41146124\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"GetUserDetailsResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42561197,\n                        \"duration\": 25587\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\"\n                        ],\n                        \"parentType\": \"GetUserDetailsResult\",\n                        \"fieldName\": \"userDetails\",\n                        \"returnType\": \"UserDetails!\",\n                        \"startOffset\": 42596424,\n                        \"duration\": 14340\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\",\n                            \"id\"\n                        ],\n                        \"parentType\": \"UserDetails\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42629106,\n                        \"duration\": 8738\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\",\n                            \"email\"\n                        ],\n                        \"parentType\": \"UserDetails\",\n                        \"fieldName\": \"email\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42642944,\n                        \"duration\": 7518\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\",\n                            \"firstName\"\n                        ],\n                        \"parentType\": \"UserDetails\",\n                        \"fieldName\": \"firstName\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42654731,\n                        \"duration\": 5933\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\",\n                            \"lastName\"\n                        ],\n                        \"parentType\": \"UserDetails\",\n                        \"fieldName\": \"lastName\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42665877,\n                        \"duration\": 5475\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\",\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"UserDetails\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42676662,\n                        \"duration\": 5557\n                    },\n                    {\n                        \"path\": [\n                            \"getUserDetails\",\n                            \"userDetails\",\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"UserDetails\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 42686133,\n                        \"duration\": 6812\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "getTodoList",
@@ -177,7 +1020,7 @@
 						"body": {
 							"mode": "graphql",
 							"graphql": {
-								"query": "query getTodoList ($userId: String!) {\n    getTodoList (userId: $userId) {\n        message\n        todo {\n            id\n            userId\n            title\n            description\n        }\n    }\n}",
+								"query": "query getTodoList ($userId: String!) {\n    getTodoList (userId: $userId) {\n        message\n        todo {\n            id\n            userId\n            title\n            description\n            dataType\n            createdAt\n            updatedAt\n        }\n    }\n}",
 								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
 							}
 						},
@@ -188,7 +1031,93 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "getTodoList",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query getTodoList ($userId: String!) {\n    getTodoList (userId: $userId) {\n        message\n        todo {\n            id\n            userId\n            title\n            description\n            dataType\n            createdAt\n            updatedAt\n        }\n    }\n}",
+										"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5759"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:56:25 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "86418721-9622-416d-8df2-e2d66dee0dd9"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "5759"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUubFjuSQ0FjUg="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59b29-096ddb7c2038e04a2003cae2;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "aLmcNgq0opKs_zcytenjfegH2feUOcUkbE9wn58SNHfSMLC2tBXrHA=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"getTodoList\": {\n            \"message\": \"getTodoList\",\n            \"todo\": [\n                {\n                    \"id\": \"8aae3003-9ad8-4dbc-81db-486a1b930886\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"asd\",\n                    \"description\": \"asdasdasd\",\n                    \"dataType\": \"todo\",\n                    \"createdAt\": \"2020-12-25T06:45:17.312Z\",\n                    \"updatedAt\": \"2020-12-25T06:45:17.312Z\"\n                },\n                {\n                    \"id\": \"c2843a06-41c1-4517-86c7-ca6075be7e45\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"dasdasd\",\n                    \"description\": \"asdasd\",\n                    \"dataType\": \"todo\",\n                    \"createdAt\": \"2020-12-25T07:44:54.042Z\",\n                    \"updatedAt\": \"2020-12-25T07:44:54.042Z\"\n                },\n                {\n                    \"id\": \"b2773675-6a75-4d52-b994-22dd45fa7c0f\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"test\",\n                    \"description\": \"test1\",\n                    \"dataType\": \"todo\",\n                    \"createdAt\": \"2020-12-25T07:54:57.146Z\",\n                    \"updatedAt\": \"2020-12-25T07:54:57.146Z\"\n                },\n                {\n                    \"id\": \"3f6f6206-c4d0-4b5c-bd6c-d60107dcff4e\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"todo data\",\n                    \"description\": \"todo datav todo data\",\n                    \"dataType\": \"todo\",\n                    \"createdAt\": \"2020-12-25T06:44:25.132Z\",\n                    \"updatedAt\": \"2020-12-25T06:44:25.132Z\"\n                }\n            ]\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:56:25.053Z\",\n            \"endTime\": \"2020-12-25T07:56:25.092Z\",\n            \"duration\": 39416408,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"getTodoList\"\n                        ],\n                        \"parentType\": \"Query\",\n                        \"fieldName\": \"getTodoList\",\n                        \"returnType\": \"GetTodoListResult!\",\n                        \"startOffset\": 2857873,\n                        \"duration\": 36088422\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"GetTodoListResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 38991951,\n                        \"duration\": 26311\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\"\n                        ],\n                        \"parentType\": \"GetTodoListResult\",\n                        \"fieldName\": \"todo\",\n                        \"returnType\": \"[Todo!]!\",\n                        \"startOffset\": 39027721,\n                        \"duration\": 13276\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39065771,\n                        \"duration\": 7660\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39079271,\n                        \"duration\": 6060\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39089570,\n                        \"duration\": 7112\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39100820,\n                        \"duration\": 6703\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39111788,\n                        \"duration\": 5398\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39121918,\n                        \"duration\": 5388\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            0,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39132408,\n                        \"duration\": 5361\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39148985,\n                        \"duration\": 5453\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39158005,\n                        \"duration\": 6113\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39167754,\n                        \"duration\": 6403\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39177866,\n                        \"duration\": 5251\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39188027,\n                        \"duration\": 5325\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39198084,\n                        \"duration\": 5165\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            1,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39207320,\n                        \"duration\": 6629\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39221186,\n                        \"duration\": 6670\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39231652,\n                        \"duration\": 6346\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39241519,\n                        \"duration\": 5120\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39252899,\n                        \"duration\": 5373\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39263106,\n                        \"duration\": 5523\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39283291,\n                        \"duration\": 6462\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            2,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39293631,\n                        \"duration\": 6312\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39306933,\n                        \"duration\": 6420\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39316870,\n                        \"duration\": 5055\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39326131,\n                        \"duration\": 5553\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39337253,\n                        \"duration\": 5458\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39346465,\n                        \"duration\": 6164\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39356065,\n                        \"duration\": 6068\n                    },\n                    {\n                        \"path\": [\n                            \"getTodoList\",\n                            \"todo\",\n                            3,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Todo\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 39365837,\n                        \"duration\": 6052\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "getInProgressList",
@@ -204,7 +1133,7 @@
 						"body": {
 							"mode": "graphql",
 							"graphql": {
-								"query": "query getInProgressList ($userId: String!) {\n    getInProgressList (userId: $userId) {\n        message\n        inProgress {\n            id\n            userId\n            title\n            description\n        }\n    }\n}",
+								"query": "query getInProgressList ($userId: String!) {\n    getInProgressList (userId: $userId) {\n        message\n        inProgress {\n            id\n            userId\n            title\n            description\n            dataType\n            createdAt\n            updatedAt\n        }\n    }\n}",
 								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
 							}
 						},
@@ -215,7 +1144,93 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "getInProgressList",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query getInProgressList ($userId: String!) {\n    getInProgressList (userId: $userId) {\n        message\n        inProgress {\n            id\n            userId\n            title\n            description\n            dataType\n            createdAt\n            updatedAt\n        }\n    }\n}",
+										"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5161"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:56:31 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "2b94528d-3edf-4942-928b-355fdcdbb947"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "5161"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUvWF_ISQ0FrIA="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59b2e-2fc0a3a05329a83d6d981f40;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "bppnWn6gn8db-88W6fOYKRZJWAjz8EHbCq0X3h9uOf3f_EOGX9yT_w=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"getInProgressList\": {\n            \"message\": \"getInProgressList\",\n            \"inProgress\": [\n                {\n                    \"id\": \"2664a88e-8fbe-4d80-95cb-735ef7bfd09a\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"test\",\n                    \"description\": \"test1\",\n                    \"dataType\": \"inProgress\",\n                    \"createdAt\": \"2020-12-25T07:55:06.295Z\",\n                    \"updatedAt\": \"2020-12-25T07:55:06.295Z\"\n                },\n                {\n                    \"id\": \"0fabbb81-d818-4b06-9b72-4c76884cd90c\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"sadasd\",\n                    \"description\": \"123123213\",\n                    \"dataType\": \"inProgress\",\n                    \"createdAt\": \"2020-12-25T06:45:22.002Z\",\n                    \"updatedAt\": \"2020-12-25T06:45:22.002Z\"\n                },\n                {\n                    \"id\": \"b9c57df1-ed7f-4a56-8a9a-ffda02543138\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"in progress \",\n                    \"description\": \" in progress datain progress datain progress datain progress datain progress datain progress datain progress datain progress datain progress datain progress datain progress datain progress datain progress data\",\n                    \"dataType\": \"inProgress\",\n                    \"createdAt\": \"2020-12-25T06:44:40.402Z\",\n                    \"updatedAt\": \"2020-12-25T06:44:40.402Z\"\n                }\n            ]\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:56:31.027Z\",\n            \"endTime\": \"2020-12-25T07:56:31.077Z\",\n            \"duration\": 50148763,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"getInProgressList\"\n                        ],\n                        \"parentType\": \"Query\",\n                        \"fieldName\": \"getInProgressList\",\n                        \"returnType\": \"GetInProgressListResult!\",\n                        \"startOffset\": 18286288,\n                        \"duration\": 31446826\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"GetInProgressListResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49779176,\n                        \"duration\": 25096\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\"\n                        ],\n                        \"parentType\": \"GetInProgressListResult\",\n                        \"fieldName\": \"inProgress\",\n                        \"returnType\": \"[InProgress!]!\",\n                        \"startOffset\": 49813960,\n                        \"duration\": 12322\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"id\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49852337,\n                        \"duration\": 10058\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49868923,\n                        \"duration\": 6822\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"title\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49879971,\n                        \"duration\": 7235\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"description\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49891487,\n                        \"duration\": 7171\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49903134,\n                        \"duration\": 5594\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49913742,\n                        \"duration\": 5437\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            0,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49924402,\n                        \"duration\": 5528\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"id\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49942066,\n                        \"duration\": 5563\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49951269,\n                        \"duration\": 6477\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"title\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49961129,\n                        \"duration\": 6152\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"description\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49970877,\n                        \"duration\": 5096\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 49980681,\n                        \"duration\": 5117\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50013075,\n                        \"duration\": 5473\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            1,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50022621,\n                        \"duration\": 6803\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"id\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50037184,\n                        \"duration\": 6600\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50047466,\n                        \"duration\": 6557\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"title\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50057538,\n                        \"duration\": 5080\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"description\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50067181,\n                        \"duration\": 5002\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50076980,\n                        \"duration\": 5098\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50085531,\n                        \"duration\": 6413\n                    },\n                    {\n                        \"path\": [\n                            \"getInProgressList\",\n                            \"inProgress\",\n                            2,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"InProgress\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 50095909,\n                        \"duration\": 6249\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "getDoneList",
@@ -231,7 +1246,7 @@
 						"body": {
 							"mode": "graphql",
 							"graphql": {
-								"query": "query getDoneList ($userId: String!) {\n    getDoneList (userId: $userId) {\n        message\n        done {\n            id\n            userId\n            title\n            description\n        }\n    }\n}",
+								"query": "query getDoneList ($userId: String!) {\n    getDoneList (userId: $userId) {\n        message\n        done {\n            id\n            userId\n            title\n            description\n            dataType\n            createdAt\n            updatedAt\n        }\n    }\n}",
 								"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
 							}
 						},
@@ -242,7 +1257,93 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "getDoneList",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query getDoneList ($userId: String!) {\n    getDoneList (userId: $userId) {\n        message\n        done {\n            id\n            userId\n            title\n            description\n            dataType\n            createdAt\n            updatedAt\n        }\n    }\n}",
+										"variables": "{\n  \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\"\n}"
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4613"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Dec 2020 07:56:39 GMT"
+								},
+								{
+									"key": "x-amzn-RequestId",
+									"value": "17dbfc3f-06c9-48b7-99e9-b9825fca2f91"
+								},
+								{
+									"key": "x-amzn-Remapped-Content-Length",
+									"value": "4613"
+								},
+								{
+									"key": "x-amz-apigw-id",
+									"value": "YGUwoF02SQ0FQQA="
+								},
+								{
+									"key": "X-Amzn-Trace-Id",
+									"value": "Root=1-5fe59b37-1bcc65d54ff21f960259fced;Sampled=1"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Miss from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 e2e052eb65d7b2dc709264963bf660a6.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "HKG60-C1"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "u8FvAQmPAHA7KyyZQs4LBN4cYyB2w1GBfDrBFvaHp3mNvR1Nzngvfg=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"getDoneList\": {\n            \"message\": \"getDoneList\",\n            \"done\": [\n                {\n                    \"id\": \"6e52d703-46c0-4c89-9d68-1104b8b64912\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"done data\",\n                    \"description\": \"done datadone datadone datadone datadone datadone datadone datadone datadone datadone datadone datadone datadone datadone datadone data\",\n                    \"dataType\": \"done\",\n                    \"createdAt\": \"2020-12-25T06:44:54.539Z\",\n                    \"updatedAt\": \"2020-12-25T06:44:54.539Z\"\n                },\n                {\n                    \"id\": \"60fd2bfd-8d6e-42e1-8890-e768f24a0eca\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"asdasd\",\n                    \"description\": \"123123aeqweqwe\",\n                    \"dataType\": \"done\",\n                    \"createdAt\": \"2020-12-25T06:45:28.777Z\",\n                    \"updatedAt\": \"2020-12-25T06:45:28.777Z\"\n                },\n                {\n                    \"id\": \"f01b34ab-b5e2-4d9a-b105-57668ffe3b6e\",\n                    \"userId\": \"2d14abc2-1426-439d-b974-f2a97066db76\",\n                    \"title\": \"test\",\n                    \"description\": \"test1\",\n                    \"dataType\": \"done\",\n                    \"createdAt\": \"2020-12-25T07:55:13.246Z\",\n                    \"updatedAt\": \"2020-12-25T07:55:13.246Z\"\n                }\n            ]\n        }\n    },\n    \"extensions\": {\n        \"tracing\": {\n            \"version\": 1,\n            \"startTime\": \"2020-12-25T07:56:39.133Z\",\n            \"endTime\": \"2020-12-25T07:56:39.186Z\",\n            \"duration\": 52581848,\n            \"execution\": {\n                \"resolvers\": [\n                    {\n                        \"path\": [\n                            \"getDoneList\"\n                        ],\n                        \"parentType\": \"Query\",\n                        \"fieldName\": \"getDoneList\",\n                        \"returnType\": \"GetDoneListResult!\",\n                        \"startOffset\": 1115512,\n                        \"duration\": 51078055\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"message\"\n                        ],\n                        \"parentType\": \"GetDoneListResult\",\n                        \"fieldName\": \"message\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52239887,\n                        \"duration\": 24650\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\"\n                        ],\n                        \"parentType\": \"GetDoneListResult\",\n                        \"fieldName\": \"done\",\n                        \"returnType\": \"[Done!]!\",\n                        \"startOffset\": 52274057,\n                        \"duration\": 12433\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52312157,\n                        \"duration\": 8117\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52325409,\n                        \"duration\": 7916\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52337706,\n                        \"duration\": 6941\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52349092,\n                        \"duration\": 5809\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52360287,\n                        \"duration\": 5906\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52371097,\n                        \"duration\": 5475\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            0,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52381777,\n                        \"duration\": 5426\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52398703,\n                        \"duration\": 5516\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52407750,\n                        \"duration\": 6475\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52417778,\n                        \"duration\": 5218\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52427668,\n                        \"duration\": 5249\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52437656,\n                        \"duration\": 5414\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52446639,\n                        \"duration\": 6397\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            1,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52457347,\n                        \"duration\": 6537\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"id\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"id\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52471282,\n                        \"duration\": 6712\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"userId\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"userId\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52481846,\n                        \"duration\": 6482\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"title\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"title\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52491722,\n                        \"duration\": 5240\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"description\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"description\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52501430,\n                        \"duration\": 5351\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"dataType\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"dataType\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52511599,\n                        \"duration\": 5357\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"createdAt\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"createdAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52520778,\n                        \"duration\": 6112\n                    },\n                    {\n                        \"path\": [\n                            \"getDoneList\",\n                            \"done\",\n                            2,\n                            \"updatedAt\"\n                        ],\n                        \"parentType\": \"Done\",\n                        \"fieldName\": \"updatedAt\",\n                        \"returnType\": \"String!\",\n                        \"startOffset\": 52530822,\n                        \"duration\": 6176\n                    }\n                ]\n            }\n        }\n    }\n}"
+						}
+					]
 				}
 			]
 		}
