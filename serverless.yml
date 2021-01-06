@@ -8,13 +8,13 @@ useDotenv: true
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
+  stage: prod
   region: ap-southeast-1
   tracing:
     apiGateway: true
     lambda: true
   environment:
-    NODE_ENV: development
+    NODE_ENV: production
     MY_AWS_ACCESS_KEY: ${param:MY_AWS_ACCESS_KEY}
     MY_AWS_SECRET_ACCESS_KEY: ${param:MY_AWS_SECRET_ACCESS_KEY}
     JWT_SECRET: ${param:JWT_SECRET}
