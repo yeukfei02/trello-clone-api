@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.2...v0.1.3) (2021-01-06)
+
+
+### Bug Fixes
+
+* 🐛 fix dev env ([ef1188b](https://github.com/yeukfei02/trello-clone-api/commit/ef1188b3aa8105872ea7f9857591937297869713))
+* 🐛 fix prod env ([7b48b95](https://github.com/yeukfei02/trello-clone-api/commit/7b48b95ce3a71c35932a4438f59e36e5d11ff8b9))
+
 ### [0.1.2](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.1...v0.1.2) (2020-12-25)
 
 
