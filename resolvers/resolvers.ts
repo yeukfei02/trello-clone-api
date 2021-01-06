@@ -32,7 +32,7 @@ const resolvers = {
           };
 
           response = {
-            message: 'getTodoList',
+            message: 'getUserDetails',
             userDetails: userDetails,
           };
         }
