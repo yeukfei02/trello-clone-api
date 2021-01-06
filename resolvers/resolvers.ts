@@ -263,7 +263,7 @@ const resolvers = {
           await newTrelloCloneTodoData.save();
 
           response = {
-            message: 'addTodo',
+            message: 'addTodoData',
           };
         }
       }
@@ -290,7 +290,7 @@ const resolvers = {
           await newTrelloCloneInProgressData.save();
 
           response = {
-            message: 'addInProgress',
+            message: 'addInProgressData',
           };
         }
       }
@@ -317,7 +317,7 @@ const resolvers = {
           await newTrelloCloneDoneData.save();
 
           response = {
-            message: 'addDone',
+            message: 'addDoneData',
           };
         }
       }
