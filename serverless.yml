@@ -10,7 +10,7 @@ provider:
   runtime: nodejs12.x
   stage: prod
   region: ap-southeast-1
-  apiName: trello-clone-api-dev
+  apiName: trello-clone-api-prod
   tracing:
     apiGateway: true
     lambda: true
