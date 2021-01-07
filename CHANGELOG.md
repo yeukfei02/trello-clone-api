@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.5...v0.1.6) (2021-01-07)
+
+
+### Bug Fixes
+
+* 🐛 fix apiName in master ([3ae409e](https://github.com/yeukfei02/trello-clone-api/commit/3ae409e239126a0c4d606650e7e3c3322f181db5))
+* 🐛 fix sls deploy error ([c21c29a](https://github.com/yeukfei02/trello-clone-api/commit/c21c29a3b583a2ef25e870c24b4484708302a3ee))
+* 🐛 update sls lib ([d5233f3](https://github.com/yeukfei02/trello-clone-api/commit/d5233f392d6de8f68ade9ef364c5488b56359753))
+
 ### [0.1.5](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.4...v0.1.5) (2021-01-06)
 
 ### [0.1.4](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.3...v0.1.4) (2021-01-06)
