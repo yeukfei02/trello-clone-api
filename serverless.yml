@@ -28,6 +28,7 @@ provider:
         - '*'
   apiGateway:
     shouldStartNameWithService: true
+    description: trello clone api dev
   lambdaHashingVersion: 20201221
 
 functions:
