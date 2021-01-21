@@ -111,6 +111,21 @@
 				},
 				{
 					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();",
+									"console.log(\"jsonData = \", jsonData);",
+									"if (jsonData) {",
+									"    pm.environment.set(\"jwtToken\", jsonData.data.login.token);",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -213,14 +228,18 @@
 				{
 					"name": "changePassword",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -310,14 +329,18 @@
 				{
 					"name": "addTodoData",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -423,14 +446,18 @@
 				{
 					"name": "addInProgressData",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -536,14 +563,18 @@
 				{
 					"name": "addDoneData",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -649,14 +680,18 @@
 				{
 					"name": "deleteTodoDataById",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -762,14 +797,18 @@
 				{
 					"name": "deleteInProgressDataById",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -875,14 +914,18 @@
 				{
 					"name": "deleteDoneDataById",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -993,14 +1036,18 @@
 				{
 					"name": "getUserDetails",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -1106,14 +1153,18 @@
 				{
 					"name": "getTodoList",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -1219,14 +1270,18 @@
 				{
 					"name": "getInProgressList",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
@@ -1332,14 +1387,18 @@
 				{
 					"name": "getDoneList",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlldWtmZWkwMkBnbWFpbC5jb20iLCJpYXQiOjE2MDg4MzE1MjgsImV4cCI6MTYwODkxNzkyOH0.w3Nl1O2Zkd5a8ZMaZJPVrT4ab2FjBvivSc0zHiI9_os",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "graphql",
 							"graphql": {
