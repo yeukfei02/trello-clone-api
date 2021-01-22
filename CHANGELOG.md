@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.8...v0.1.9) (2021-01-22)
+
+
+### Features
+
+* 🎸 add serverless-prune-plugin ([a7c1c1a](https://github.com/yeukfei02/trello-clone-api/commit/a7c1c1a53c77b74c548a197e91ca259a151cdb0e))
+
+
+### Bug Fixes
+
+* 🐛 fix package command ([83efd67](https://github.com/yeukfei02/trello-clone-api/commit/83efd6735549cdde5488d32a320f4a4b4b85aa47))
+* 🐛 update sls lib ([5b9be6f](https://github.com/yeukfei02/trello-clone-api/commit/5b9be6fcde6ec04a7ca9ed2c73aef37f9b587163))
+
 ### [0.1.8](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.7...v0.1.8) (2021-01-22)
 
 
