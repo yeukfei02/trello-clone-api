@@ -55,8 +55,8 @@
   "scripts": {
     "dev": "serverless offline start",
     "deploy": "serverless deploy",
-    "dashboard": "serverless dashboard",
     "package": "serverless package",
+    "dashboard": "serverless dashboard",
     "lint": "eslint '*/**/*.{ts,tsx}' --quiet --fix",
     "test": "jest --detectOpenHandles",
     "commit": "git-cz",
