@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.9...v0.1.10) (2021-01-26)
+
+
+### Bug Fixes
+
+* 🐛 fix xray tracing id ([1bb7714](https://github.com/yeukfei02/trello-clone-api/commit/1bb7714fb78b905f4ced2c7ec92e2a22be4ff638))
+
 ### [0.1.9](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.8...v0.1.9) (2021-01-22)
 
 
