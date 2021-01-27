@@ -57,6 +57,7 @@
     "deploy": "serverless deploy",
     "package": "serverless package",
     "dashboard": "serverless dashboard",
+    "remove": "serverless remove",
     "lint": "eslint '*/**/*.{ts,tsx}' --quiet --fix",
     "test": "jest --detectOpenHandles",
     "commit": "git-cz",
