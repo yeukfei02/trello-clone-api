@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.10...v0.1.11) (2021-01-27)
+
+
+### Bug Fixes
+
+* 🐛 add remove command ([ab1967e](https://github.com/yeukfei02/trello-clone-api/commit/ab1967e8bf12e24679b97c4272246c2fc082d2c9))
+
 ### [0.1.10](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.9...v0.1.10) (2021-01-26)
 
 
