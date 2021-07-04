@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.11...v0.1.12) (2021-07-04)
+
+
+### Features
+
+* 🎸 add github actions ([4fca30a](https://github.com/yeukfei02/trello-clone-api/commit/4fca30aa67f07cb956b4bec8f43f929dbcdc4b7f))
+
+
+### Bug Fixes
+
+* 🐛 add controller func ([7d8bee8](https://github.com/yeukfei02/trello-clone-api/commit/7d8bee864880e11b957f434a5d60e14d346f0fd9))
+* 🐛 fix error ([e4ca50f](https://github.com/yeukfei02/trello-clone-api/commit/e4ca50fc9064307c63da34056ddd766c8fd495b6))
+* 🐛 fix sls.yml, readme.md ([3cfbf1d](https://github.com/yeukfei02/trello-clone-api/commit/3cfbf1dca0455961f3bf0911a01547ffb521114b))
+* 🐛 fix stage in deploy.yml ([64e52f4](https://github.com/yeukfei02/trello-clone-api/commit/64e52f48a850fa52178d74b7510b9147cbcc394b))
+* 🐛 update serverless-plugin-split-stacks lib ([ba26061](https://github.com/yeukfei02/trello-clone-api/commit/ba26061c98d09bc04beeca5094761c64827bf787))
+* 🐛 update sls lib ([ebabb8c](https://github.com/yeukfei02/trello-clone-api/commit/ebabb8c7f3f61d8f97b5dc205b729cf38e9b7cc1))
+* 🐛 update sls lib ([a0fa352](https://github.com/yeukfei02/trello-clone-api/commit/a0fa35296adaf1396d28390657cb78aa9e13de96))
+
 ### [0.1.11](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.10...v0.1.11) (2021-01-27)
 
 
