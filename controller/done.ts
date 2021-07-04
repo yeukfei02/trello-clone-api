@@ -61,7 +61,12 @@ export const addDoneDataControllerFunc = async (parent: any, args: any, context:
   return response;
 };
 
-export const deleteDoneDataByIdControllerFunc = async (parent: any, args: any, context: any, info: any): Promise<any> => {
+export const deleteDoneDataByIdControllerFunc = async (
+  parent: any,
+  args: any,
+  context: any,
+  info: any,
+): Promise<any> => {
   let response = {};
 
   const token = context.token;
@@ -79,5 +84,4 @@ export const deleteDoneDataByIdControllerFunc = async (parent: any, args: any, c
   }
 
   return response;
-},
-}
+};
