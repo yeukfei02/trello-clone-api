@@ -4,7 +4,7 @@ trello-clone-api
 
 documentation: <https://documenter.getpostman.com/view/3827865/TVsxA6G8>
 
-api url: <https://p2e5httozl.execute-api.ap-southeast-1.amazonaws.com/prod/>
+api url: <https://ec2y8ai7oa.execute-api.ap-southeast-1.amazonaws.com/prod/>
 
 ## Requirement
 
