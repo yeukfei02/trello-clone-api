@@ -1,6 +1,6 @@
 {
   "name": "trello-clone-api",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "main": "app.js",
   "repository": "https://github.com/yeukfei02/trello-clone-api.git",
   "author": "Donald Wu <yeukfei02@gmail.com>",
