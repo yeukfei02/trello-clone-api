@@ -14,11 +14,11 @@
     "dotenv": "^8.2.0",
     "dynamoose": "^2.5.0",
     "graphql": "^15.4.0",
-    "graphql-type-json": "^0.3.2",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.32",
+    "nexus": "^1.1.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -43,7 +43,7 @@
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "serverless": "^2.52.1",
-    "serverless-offline": "^6.8.0",
+    "serverless-offline": "^8.0.0",
     "serverless-plugin-split-stacks": "^1.11.0",
     "serverless-plugin-typescript": "^1.1.9",
     "serverless-prune-plugin": "^1.4.3",
