@@ -3,90 +3,83 @@
  * Do not make changes to this file directly
  */
 
+
+
+
+
+
+
 declare global {
   interface NexusGen extends NexusGenTypes {}
 }
 
 export interface NexusGenInputs {
-  AddDoneDataInput: {
-    // input type
+  AddDoneDataInput: { // input type
     description: string; // String!
     title: string; // String!
     userId: string; // String!
-  };
-  AddInProgressDataInput: {
-    // input type
+  }
+  AddInProgressDataInput: { // input type
     description: string; // String!
     title: string; // String!
     userId: string; // String!
-  };
-  AddTodoDataInput: {
-    // input type
+  }
+  AddTodoDataInput: { // input type
     description: string; // String!
     title: string; // String!
     userId: string; // String!
-  };
-  ChangePasswordInput: {
-    // input type
+  }
+  ChangePasswordInput: { // input type
     currentPassword: string; // String!
     id: string; // String!
     newPassword: string; // String!
-  };
-  LoginInput: {
-    // input type
+  }
+  LoginInput: { // input type
     email: string; // String!
     password: string; // String!
-  };
-  SignupInput: {
-    // input type
+  }
+  SignupInput: { // input type
     email: string; // String!
     firstName: string; // String!
     lastName: string; // String!
     password: string; // String!
-  };
+  }
 }
 
-export interface NexusGenEnums {}
+export interface NexusGenEnums {
+}
 
 export interface NexusGenScalars {
-  String: string;
-  Int: number;
-  Float: number;
-  Boolean: boolean;
-  ID: string;
+  String: string
+  Int: number
+  Float: number
+  Boolean: boolean
+  ID: string
 }
 
 export interface NexusGenObjects {
-  AddDoneDataResult: {
-    // root type
+  AddDoneDataResult: { // root type
     message: string; // String!
-  };
-  AddInProgressDataResult: {
-    // root type
+  }
+  AddInProgressDataResult: { // root type
     message: string; // String!
-  };
-  AddTodoDataResult: {
-    // root type
+  }
+  AddTodoDataResult: { // root type
     message: string; // String!
-  };
-  ChangePasswordResult: {
-    // root type
+  }
+  ChangePasswordResult: { // root type
     message: string; // String!
-  };
-  DeleteDoneDataByIdResult: {
-    // root type
+  }
+  DeleteDoneDataByIdResult: { // root type
     message: string; // String!
-  };
-  DeleteInProgressDataByIdResult: {
-    // root type
+  }
+  DeleteInProgressDataByIdResult: { // root type
     message: string; // String!
-  };
-  DeleteTodoDataByIdResult: {
-    // root type
+  }
+  DeleteTodoDataByIdResult: { // root type
     message: string; // String!
-  };
-  Done: {
-    // root type
+  }
+  Done: { // root type
     createdAt: string; // String!
     dataType: string; // String!
     description: string; // String!
@@ -94,29 +87,24 @@ export interface NexusGenObjects {
     title: string; // String!
     updatedAt: string; // String!
     userId: string; // String!
-  };
-  GetDoneListResult: {
-    // root type
+  }
+  GetDoneListResult: { // root type
     done: NexusGenRootTypes['Done'][]; // [Done!]!
     message: string; // String!
-  };
-  GetInProgressListResult: {
-    // root type
+  }
+  GetInProgressListResult: { // root type
     inProgress: NexusGenRootTypes['InProgress'][]; // [InProgress!]!
     message: string; // String!
-  };
-  GetTodoListResult: {
-    // root type
+  }
+  GetTodoListResult: { // root type
     message: string; // String!
     todo: NexusGenRootTypes['Todo'][]; // [Todo!]!
-  };
-  GetUserDetailsResult: {
-    // root type
+  }
+  GetUserDetailsResult: { // root type
     message: string; // String!
     userDetails: NexusGenRootTypes['UserDetails']; // UserDetails!
-  };
-  InProgress: {
-    // root type
+  }
+  InProgress: { // root type
     createdAt: string; // String!
     dataType: string; // String!
     description: string; // String!
@@ -124,21 +112,18 @@ export interface NexusGenObjects {
     title: string; // String!
     updatedAt: string; // String!
     userId: string; // String!
-  };
-  LoginResult: {
-    // root type
+  }
+  LoginResult: { // root type
     message: string; // String!
     token?: string | null; // String
     userId?: string | null; // String
-  };
+  }
   Mutation: {};
   Query: {};
-  SignupResult: {
-    // root type
+  SignupResult: { // root type
     message: string; // String!
-  };
-  Todo: {
-    // root type
+  }
+  Todo: { // root type
     createdAt: string; // String!
     dataType: string; // String!
     description: string; // String!
@@ -146,57 +131,50 @@ export interface NexusGenObjects {
     title: string; // String!
     updatedAt: string; // String!
     userId: string; // String!
-  };
-  UserDetails: {
-    // root type
+  }
+  UserDetails: { // root type
     createdAt: string; // String!
     email: string; // String!
     firstName: string; // String!
     id: string; // String!
     lastName: string; // String!
     updatedAt: string; // String!
-  };
+  }
 }
 
-export interface NexusGenInterfaces {}
+export interface NexusGenInterfaces {
+}
 
-export interface NexusGenUnions {}
+export interface NexusGenUnions {
+}
 
-export type NexusGenRootTypes = NexusGenObjects;
+export type NexusGenRootTypes = NexusGenObjects
 
-export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars;
+export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
-  AddDoneDataResult: {
-    // field return type
+  AddDoneDataResult: { // field return type
     message: string; // String!
-  };
-  AddInProgressDataResult: {
-    // field return type
+  }
+  AddInProgressDataResult: { // field return type
     message: string; // String!
-  };
-  AddTodoDataResult: {
-    // field return type
+  }
+  AddTodoDataResult: { // field return type
     message: string; // String!
-  };
-  ChangePasswordResult: {
-    // field return type
+  }
+  ChangePasswordResult: { // field return type
     message: string; // String!
-  };
-  DeleteDoneDataByIdResult: {
-    // field return type
+  }
+  DeleteDoneDataByIdResult: { // field return type
     message: string; // String!
-  };
-  DeleteInProgressDataByIdResult: {
-    // field return type
+  }
+  DeleteInProgressDataByIdResult: { // field return type
     message: string; // String!
-  };
-  DeleteTodoDataByIdResult: {
-    // field return type
+  }
+  DeleteTodoDataByIdResult: { // field return type
     message: string; // String!
-  };
-  Done: {
-    // field return type
+  }
+  Done: { // field return type
     createdAt: string; // String!
     dataType: string; // String!
     description: string; // String!
@@ -204,29 +182,24 @@ export interface NexusGenFieldTypes {
     title: string; // String!
     updatedAt: string; // String!
     userId: string; // String!
-  };
-  GetDoneListResult: {
-    // field return type
+  }
+  GetDoneListResult: { // field return type
     done: NexusGenRootTypes['Done'][]; // [Done!]!
     message: string; // String!
-  };
-  GetInProgressListResult: {
-    // field return type
+  }
+  GetInProgressListResult: { // field return type
     inProgress: NexusGenRootTypes['InProgress'][]; // [InProgress!]!
     message: string; // String!
-  };
-  GetTodoListResult: {
-    // field return type
+  }
+  GetTodoListResult: { // field return type
     message: string; // String!
     todo: NexusGenRootTypes['Todo'][]; // [Todo!]!
-  };
-  GetUserDetailsResult: {
-    // field return type
+  }
+  GetUserDetailsResult: { // field return type
     message: string; // String!
     userDetails: NexusGenRootTypes['UserDetails']; // UserDetails!
-  };
-  InProgress: {
-    // field return type
+  }
+  InProgress: { // field return type
     createdAt: string; // String!
     dataType: string; // String!
     description: string; // String!
@@ -234,15 +207,13 @@ export interface NexusGenFieldTypes {
     title: string; // String!
     updatedAt: string; // String!
     userId: string; // String!
-  };
-  LoginResult: {
-    // field return type
+  }
+  LoginResult: { // field return type
     message: string; // String!
     token: string | null; // String
     userId: string | null; // String
-  };
-  Mutation: {
-    // field return type
+  }
+  Mutation: { // field return type
     addDoneData: NexusGenRootTypes['AddDoneDataResult']; // AddDoneDataResult!
     addInProgressData: NexusGenRootTypes['AddInProgressDataResult']; // AddInProgressDataResult!
     addTodoData: NexusGenRootTypes['AddTodoDataResult']; // AddTodoDataResult!
@@ -252,20 +223,17 @@ export interface NexusGenFieldTypes {
     deleteTodoDataById: NexusGenRootTypes['DeleteTodoDataByIdResult']; // DeleteTodoDataByIdResult!
     login: NexusGenRootTypes['LoginResult']; // LoginResult!
     signup: NexusGenRootTypes['SignupResult']; // SignupResult!
-  };
-  Query: {
-    // field return type
+  }
+  Query: { // field return type
     getDoneList: NexusGenRootTypes['GetDoneListResult']; // GetDoneListResult!
     getInProgressList: NexusGenRootTypes['GetInProgressListResult']; // GetInProgressListResult!
     getTodoList: NexusGenRootTypes['GetTodoListResult']; // GetTodoListResult!
     getUserDetails: NexusGenRootTypes['GetUserDetailsResult']; // GetUserDetailsResult!
-  };
-  SignupResult: {
-    // field return type
+  }
+  SignupResult: { // field return type
     message: string; // String!
-  };
-  Todo: {
-    // field return type
+  }
+  Todo: { // field return type
     createdAt: string; // String!
     dataType: string; // String!
     description: string; // String!
@@ -273,199 +241,168 @@ export interface NexusGenFieldTypes {
     title: string; // String!
     updatedAt: string; // String!
     userId: string; // String!
-  };
-  UserDetails: {
-    // field return type
+  }
+  UserDetails: { // field return type
     createdAt: string; // String!
     email: string; // String!
     firstName: string; // String!
     id: string; // String!
     lastName: string; // String!
     updatedAt: string; // String!
-  };
+  }
 }
 
 export interface NexusGenFieldTypeNames {
-  AddDoneDataResult: {
-    // field return type name
-    message: 'String';
-  };
-  AddInProgressDataResult: {
-    // field return type name
-    message: 'String';
-  };
-  AddTodoDataResult: {
-    // field return type name
-    message: 'String';
-  };
-  ChangePasswordResult: {
-    // field return type name
-    message: 'String';
-  };
-  DeleteDoneDataByIdResult: {
-    // field return type name
-    message: 'String';
-  };
-  DeleteInProgressDataByIdResult: {
-    // field return type name
-    message: 'String';
-  };
-  DeleteTodoDataByIdResult: {
-    // field return type name
-    message: 'String';
-  };
-  Done: {
-    // field return type name
-    createdAt: 'String';
-    dataType: 'String';
-    description: 'String';
-    id: 'String';
-    title: 'String';
-    updatedAt: 'String';
-    userId: 'String';
-  };
-  GetDoneListResult: {
-    // field return type name
-    done: 'Done';
-    message: 'String';
-  };
-  GetInProgressListResult: {
-    // field return type name
-    inProgress: 'InProgress';
-    message: 'String';
-  };
-  GetTodoListResult: {
-    // field return type name
-    message: 'String';
-    todo: 'Todo';
-  };
-  GetUserDetailsResult: {
-    // field return type name
-    message: 'String';
-    userDetails: 'UserDetails';
-  };
-  InProgress: {
-    // field return type name
-    createdAt: 'String';
-    dataType: 'String';
-    description: 'String';
-    id: 'String';
-    title: 'String';
-    updatedAt: 'String';
-    userId: 'String';
-  };
-  LoginResult: {
-    // field return type name
-    message: 'String';
-    token: 'String';
-    userId: 'String';
-  };
-  Mutation: {
-    // field return type name
-    addDoneData: 'AddDoneDataResult';
-    addInProgressData: 'AddInProgressDataResult';
-    addTodoData: 'AddTodoDataResult';
-    changePassword: 'ChangePasswordResult';
-    deleteDoneDataById: 'DeleteDoneDataByIdResult';
-    deleteInProgressDataById: 'DeleteInProgressDataByIdResult';
-    deleteTodoDataById: 'DeleteTodoDataByIdResult';
-    login: 'LoginResult';
-    signup: 'SignupResult';
-  };
-  Query: {
-    // field return type name
-    getDoneList: 'GetDoneListResult';
-    getInProgressList: 'GetInProgressListResult';
-    getTodoList: 'GetTodoListResult';
-    getUserDetails: 'GetUserDetailsResult';
-  };
-  SignupResult: {
-    // field return type name
-    message: 'String';
-  };
-  Todo: {
-    // field return type name
-    createdAt: 'String';
-    dataType: 'String';
-    description: 'String';
-    id: 'String';
-    title: 'String';
-    updatedAt: 'String';
-    userId: 'String';
-  };
-  UserDetails: {
-    // field return type name
-    createdAt: 'String';
-    email: 'String';
-    firstName: 'String';
-    id: 'String';
-    lastName: 'String';
-    updatedAt: 'String';
-  };
+  AddDoneDataResult: { // field return type name
+    message: 'String'
+  }
+  AddInProgressDataResult: { // field return type name
+    message: 'String'
+  }
+  AddTodoDataResult: { // field return type name
+    message: 'String'
+  }
+  ChangePasswordResult: { // field return type name
+    message: 'String'
+  }
+  DeleteDoneDataByIdResult: { // field return type name
+    message: 'String'
+  }
+  DeleteInProgressDataByIdResult: { // field return type name
+    message: 'String'
+  }
+  DeleteTodoDataByIdResult: { // field return type name
+    message: 'String'
+  }
+  Done: { // field return type name
+    createdAt: 'String'
+    dataType: 'String'
+    description: 'String'
+    id: 'String'
+    title: 'String'
+    updatedAt: 'String'
+    userId: 'String'
+  }
+  GetDoneListResult: { // field return type name
+    done: 'Done'
+    message: 'String'
+  }
+  GetInProgressListResult: { // field return type name
+    inProgress: 'InProgress'
+    message: 'String'
+  }
+  GetTodoListResult: { // field return type name
+    message: 'String'
+    todo: 'Todo'
+  }
+  GetUserDetailsResult: { // field return type name
+    message: 'String'
+    userDetails: 'UserDetails'
+  }
+  InProgress: { // field return type name
+    createdAt: 'String'
+    dataType: 'String'
+    description: 'String'
+    id: 'String'
+    title: 'String'
+    updatedAt: 'String'
+    userId: 'String'
+  }
+  LoginResult: { // field return type name
+    message: 'String'
+    token: 'String'
+    userId: 'String'
+  }
+  Mutation: { // field return type name
+    addDoneData: 'AddDoneDataResult'
+    addInProgressData: 'AddInProgressDataResult'
+    addTodoData: 'AddTodoDataResult'
+    changePassword: 'ChangePasswordResult'
+    deleteDoneDataById: 'DeleteDoneDataByIdResult'
+    deleteInProgressDataById: 'DeleteInProgressDataByIdResult'
+    deleteTodoDataById: 'DeleteTodoDataByIdResult'
+    login: 'LoginResult'
+    signup: 'SignupResult'
+  }
+  Query: { // field return type name
+    getDoneList: 'GetDoneListResult'
+    getInProgressList: 'GetInProgressListResult'
+    getTodoList: 'GetTodoListResult'
+    getUserDetails: 'GetUserDetailsResult'
+  }
+  SignupResult: { // field return type name
+    message: 'String'
+  }
+  Todo: { // field return type name
+    createdAt: 'String'
+    dataType: 'String'
+    description: 'String'
+    id: 'String'
+    title: 'String'
+    updatedAt: 'String'
+    userId: 'String'
+  }
+  UserDetails: { // field return type name
+    createdAt: 'String'
+    email: 'String'
+    firstName: 'String'
+    id: 'String'
+    lastName: 'String'
+    updatedAt: 'String'
+  }
 }
 
 export interface NexusGenArgTypes {
   Mutation: {
-    addDoneData: {
-      // args
+    addDoneData: { // args
       data: NexusGenInputs['AddDoneDataInput']; // AddDoneDataInput!
-    };
-    addInProgressData: {
-      // args
+    }
+    addInProgressData: { // args
       data: NexusGenInputs['AddInProgressDataInput']; // AddInProgressDataInput!
-    };
-    addTodoData: {
-      // args
+    }
+    addTodoData: { // args
       data: NexusGenInputs['AddTodoDataInput']; // AddTodoDataInput!
-    };
-    changePassword: {
-      // args
+    }
+    changePassword: { // args
       data: NexusGenInputs['ChangePasswordInput']; // ChangePasswordInput!
-    };
-    deleteDoneDataById: {
-      // args
+    }
+    deleteDoneDataById: { // args
       id: string; // String!
-    };
-    deleteInProgressDataById: {
-      // args
+    }
+    deleteInProgressDataById: { // args
       id: string; // String!
-    };
-    deleteTodoDataById: {
-      // args
+    }
+    deleteTodoDataById: { // args
       id: string; // String!
-    };
-    login: {
-      // args
+    }
+    login: { // args
       data: NexusGenInputs['LoginInput']; // LoginInput!
-    };
-    signup: {
-      // args
+    }
+    signup: { // args
       data: NexusGenInputs['SignupInput']; // SignupInput!
-    };
-  };
+    }
+  }
   Query: {
-    getDoneList: {
-      // args
+    getDoneList: { // args
       userId: string; // String!
-    };
-    getInProgressList: {
-      // args
+    }
+    getInProgressList: { // args
       userId: string; // String!
-    };
-    getTodoList: {
-      // args
+    }
+    getTodoList: { // args
       userId: string; // String!
-    };
-    getUserDetails: {
-      // args
+    }
+    getUserDetails: { // args
       userId: string; // String!
-    };
-  };
+    }
+  }
 }
 
-export interface NexusGenAbstractTypeMembers {}
+export interface NexusGenAbstractTypeMembers {
+}
 
-export interface NexusGenTypeInterfaces {}
+export interface NexusGenTypeInterfaces {
+}
 
 export type NexusGenObjectNames = keyof NexusGenObjects;
 
@@ -485,11 +422,11 @@ export type NexusGenAbstractsUsingStrategyResolveType = never;
 
 export type NexusGenFeaturesConfig = {
   abstractTypeStrategies: {
-    isTypeOf: false;
-    resolveType: true;
-    __typename: false;
-  };
-};
+    isTypeOf: false
+    resolveType: true
+    __typename: false
+  }
+}
 
 export interface NexusGenTypes {
   context: any;
@@ -508,13 +445,8 @@ export interface NexusGenTypes {
   scalarNames: NexusGenScalarNames;
   unionNames: NexusGenUnionNames;
   allInputTypes: NexusGenTypes['inputNames'] | NexusGenTypes['enumNames'] | NexusGenTypes['scalarNames'];
-  allOutputTypes:
-    | NexusGenTypes['objectNames']
-    | NexusGenTypes['enumNames']
-    | NexusGenTypes['unionNames']
-    | NexusGenTypes['interfaceNames']
-    | NexusGenTypes['scalarNames'];
-  allNamedTypes: NexusGenTypes['allInputTypes'] | NexusGenTypes['allOutputTypes'];
+  allOutputTypes: NexusGenTypes['objectNames'] | NexusGenTypes['enumNames'] | NexusGenTypes['unionNames'] | NexusGenTypes['interfaceNames'] | NexusGenTypes['scalarNames'];
+  allNamedTypes: NexusGenTypes['allInputTypes'] | NexusGenTypes['allOutputTypes']
   abstractTypes: NexusGenTypes['interfaceNames'] | NexusGenTypes['unionNames'];
   abstractTypeMembers: NexusGenAbstractTypeMembers;
   objectsUsingAbstractStrategyIsTypeOf: NexusGenObjectsUsingAbstractStrategyIsTypeOf;
@@ -522,11 +454,18 @@ export interface NexusGenTypes {
   features: NexusGenFeaturesConfig;
 }
 
+
 declare global {
-  interface NexusGenPluginTypeConfig<TypeName extends string> {}
-  interface NexusGenPluginInputTypeConfig<TypeName extends string> {}
-  interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {}
-  interface NexusGenPluginInputFieldConfig<TypeName extends string, FieldName extends string> {}
-  interface NexusGenPluginSchemaConfig {}
-  interface NexusGenPluginArgConfig {}
+  interface NexusGenPluginTypeConfig<TypeName extends string> {
+  }
+  interface NexusGenPluginInputTypeConfig<TypeName extends string> {
+  }
+  interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {
+  }
+  interface NexusGenPluginInputFieldConfig<TypeName extends string, FieldName extends string> {
+  }
+  interface NexusGenPluginSchemaConfig {
+  }
+  interface NexusGenPluginArgConfig {
+  }
 }

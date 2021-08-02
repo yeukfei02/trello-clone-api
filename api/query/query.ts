@@ -1,8 +1,8 @@
 import { queryField, nonNull, stringArg } from 'nexus';
 import { GetUserDetailsResult } from '../types/getUserDetailsResult';
-import { GetTodoListResult } from '../types/GetTodoListResult';
-import { GetInProgressListResult } from '../types/GetInProgressListResult';
-import { GetDoneListResult } from '../types/GetDoneListResult';
+import { GetTodoListResult } from '../types/getTodoListResult';
+import { GetInProgressListResult } from '../types/getInProgressListResult';
+import { GetDoneListResult } from '../types/getDoneListResult';
 
 import { getUserDetailsControllerFunc } from '../../controller/user';
 import { getTodoListControllerFunc } from '../../controller/todo';
