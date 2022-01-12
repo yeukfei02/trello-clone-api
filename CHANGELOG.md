@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.16](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.15...v0.1.16) (2022-01-12)
+
+
+### Features
+
+* 🎸 add generate:nexus script ([6b07964](https://github.com/yeukfei02/trello-clone-api/commit/6b07964e2c5708f0c8f9e06e02a661f1c4a4c1f0))
+* 🎸 add graphql-request for test case ([c716db4](https://github.com/yeukfei02/trello-clone-api/commit/c716db48f26cb4dc8f2d2bb7668ae6966a80eb81))
+* 🎸 update sls lib and use arm64 architecture ([ecd8363](https://github.com/yeukfei02/trello-clone-api/commit/ecd83631c00181eb0be29fb081ad90702aa80289))
+
 ### [0.1.15](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.14...v0.1.15) (2021-08-02)
 
 
