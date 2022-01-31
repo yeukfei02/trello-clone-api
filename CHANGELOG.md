@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.17](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.16...v0.1.17) (2022-01-31)
+
+
+### Bug Fixes
+
+* 🐛 update sls lib ([7cb1af1](https://github.com/yeukfei02/trello-clone-api/commit/7cb1af148d64fc9fa0d847554103a22cf127b302))
+
 ### [0.1.16](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.15...v0.1.16) (2022-01-12)
 
 
