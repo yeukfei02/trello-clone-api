@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.18](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.17...v0.1.18) (2022-03-18)
+
+
+### Bug Fixes
+
+* 🐛 remove postman collection ([63e6008](https://github.com/yeukfei02/trello-clone-api/commit/63e6008f941e19c3a6a15732b77e493fbd966706))
+* 🐛 update sls to v3 ([5f86687](https://github.com/yeukfei02/trello-clone-api/commit/5f866870dadf140d06cc38b69280f4b8a115aba9))
+
 ### [0.1.17](https://github.com/yeukfei02/trello-clone-api/compare/v0.1.16...v0.1.17) (2022-01-31)
 
 
